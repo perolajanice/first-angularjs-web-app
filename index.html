@@ -1,0 +1,91 @@
+<!-- index.html -->
+    <!DOCTYPE html>
+    <html ng-app="scotchApp">
+    <head>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+      <!-- SPELLS -->
+      <!-- load angular and angular route via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="script.js"></script>
+
+    </head>
+    <body ng-controller="mainController">
+
+        <!-- HEADER AND NAVBAR -->
+        <header>
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                    <a class="navbar-brand" href="index.html">Angular Routing Example</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa fa-shield"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fa fa-comment"></i> Contact</a></li>
+                </ul>
+            </div>
+          </div>
+            </nav>
+        </header>
+
+
+
+
+
+
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+
+<div id="main">
+
+  <div class="jumbotron text-center">
+    <h1>Home Page</h1>
+
+      <img ng-src="2144.png" width="30%" />
+
+
+    <p>{{ message }}</p>
+</div>
+
+<!-- about.html -->
+    <div class="jumbotron text-center">
+        <h1>About Page</h1>
+
+        <img ng-src="img2.jpg" />
+
+        <p>{{ message }}</p>
+    </div>
+
+    <!-- contact.html -->
+    <div class="jumbotron text-center">
+        <h1>Contact Page</h1>
+
+        <img ng-src="img3.jpg" />
+
+
+        <p>{{ message }}</p>
+    </div>
+
+
+
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+<div ng-view></div>
+
+</div>
+
+    </body>
+    </html>
